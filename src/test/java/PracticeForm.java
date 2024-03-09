@@ -22,8 +22,8 @@ public class PracticeForm {
     }
     public PracticeForm fillDateOfBirth() {
         $x("//input[@id=\"dateOfBirthInput\"]").click();
-        $x("//select[@class=\"react-datepicker__year-select\"]").selectOptionContainingText("2001");
-        $x("//select[@class=\"react-datepicker__month-select\"]").selectOptionContainingText("February");
+        $x("//select[@class=\"react-datepicker__year-select\"]").selectOption("2001");
+        $x("//select[@class=\"react-datepicker__month-select\"]").selectOption("February");
         $x("//*[text()=\"22\"]").click();
         return this;
     }
@@ -35,8 +35,9 @@ public class PracticeForm {
         return this;
     }
     public PracticeForm uploadFile() {
-        File fileToUpload = new File("C:\\Users\\Public\\Pictures\\1.PNG");
-        $x("//input[@id=\"uploadPicture\"]").uploadFile(fileToUpload);
+
+        //$x("//input[@id=\"uploadPicture\"]").uploadFile(new File("src/test/resources/1.png"));
+        $x("//input[@id=\"uploadPicture\"]").uploadFromClasspath("1.png");
 
 
         return this;
