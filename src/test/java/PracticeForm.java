@@ -49,6 +49,10 @@ public class PracticeForm {
         $x("//button[@id=\"submit\"]").click();
         return this;
     }
+    public PracticeForm verifyModal(String key, String value) {
+        modalForCheckingSubmittedForm.verifyField(key, value);
+        return this;
+    }
     public PracticeForm testForCheckingData() {
         modalForCheckingSubmittedForm.checkName("Igor Khnykin");
         modalForCheckingSubmittedForm.checkEmail("igor@mail.ru");
