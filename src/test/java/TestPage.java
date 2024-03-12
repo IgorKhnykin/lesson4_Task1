@@ -1,27 +1,15 @@
 import org.junit.jupiter.api.Test;
 
-import com.codeborne.selenide.Selenide;
-
-import java.io.File;
-
-import static com.codeborne.selenide.Selenide.*;
-
 public class TestPage extends BasePage{
-    private final static String baseUrl = "https://demoqa.com/automation-practice-form";
-
     @Test
     public void FillForm() {
-
-        open(baseUrl);
-        executeJavaScript("$('#fixedban').remove()");
-        executeJavaScript("$('footer').remove()");
-
-        new PracticeForm().fillNameAndEmail()
-                .fillGenderAndMobile().
-                fillDateOfBirth()
-                .fillSubjectAndHobbies()
-                .uploadFile()
-                .fillCurrentAddressAndState()
+        new PracticeForm().openPage()
+                .fillNameAndEmail("Igor", "Khnykin", "igor@mail.ru")
+                .fillGenderAndMobile("1234567890")
+                .fillDateOfBirth("2000", "February", "22")
+                .fillSubjectAndHobbies("Math")
+                .uploadFile("1.png")
+                .fillCurrentAddressAndState("Voronejskaya", "NCR", "Delhi")
                 .testForCheckingData();
 
     }
