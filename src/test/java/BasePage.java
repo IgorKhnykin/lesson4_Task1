@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 abstract public class BasePage {
     @BeforeEach
     void setUp() {
+
         WebDriverManager.chromedriver().setup();
         Configuration.browser = "chrome";
         Configuration.browserSize = "1920x1080";

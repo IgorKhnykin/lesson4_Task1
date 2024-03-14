@@ -53,18 +53,4 @@ public class PracticeForm {
         modalForCheckingSubmittedForm.verifyField(key, value);
         return this;
     }
-    public PracticeForm testForCheckingData() {
-        modalForCheckingSubmittedForm.checkName("Igor Khnykin");
-        modalForCheckingSubmittedForm.checkEmail("igor@mail.ru");
-        modalForCheckingSubmittedForm.checkGender("Male");
-        modalForCheckingSubmittedForm.checkMobile("1234567890");
-        modalForCheckingSubmittedForm.checkDateOfBirth("22 February,2000");
-        modalForCheckingSubmittedForm.checkSubject("Maths");
-        modalForCheckingSubmittedForm.checkHobbies("Sports, Reading, Music");
-        modalForCheckingSubmittedForm.checkPictureName("1.png");
-        modalForCheckingSubmittedForm.checkAddress("Voronejskaya");
-        modalForCheckingSubmittedForm.checkStateAndCity("NCR Delhi");
-        return this;
-
-    }
  }
