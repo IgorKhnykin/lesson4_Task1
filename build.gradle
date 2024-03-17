@@ -12,11 +12,8 @@ repositories {
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
-    testImplementation 'com.codeborne:selenide:7.2.0'
-    testImplementation 'org.seleniumhq.selenium:selenium-java:4.18.1'
-    testImplementation 'org.seleniumhq.selenium:selenium-api:4.18.1'
-    testImplementation 'org.seleniumhq.selenium:selenium-chrome-driver:4.18.1'
-    testImplementation 'io.github.bonigarcia:webdrivermanager:5.6.3'
+    testImplementation 'com.codeborne:selenide:7.2.1'
+    testImplementation 'com.github.javafaker:javafaker:1.0.2'
 }
 
 test {
